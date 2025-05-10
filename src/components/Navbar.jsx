@@ -50,40 +50,15 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         </div>
 
         {/* Dark mode toggle button */}
-        <button
-          onClick={handleDarkModeToggle}
-          className="text-white p-2"
-        >
+        <button onClick={handleDarkModeToggle} className="text-white p-2">
           {darkMode ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
-              />
-            </svg>
+            <img src="/src/assets/light-mode.png"
+            width="40px"
+            height="40px" />
           ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M12 3v3m0 12v3m9-9h3m-18 0H3m6.293-6.293a1 1 0 011.414 0L12 6m0 12l-2.293-2.293a1 1 0 010-1.414m4.586-1.586a1 1 0 010 1.414L18 17"
-              />
-            </svg>
+            <img src="/src/assets/dark-mode.png"
+            width="40px"
+            height="40px" />
           )}
         </button>
       </div>

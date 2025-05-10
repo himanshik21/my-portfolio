@@ -42,65 +42,6 @@ const AboutSection = ({ darkMode }) => {
           </div>
         </div>
       </div>
-
-      <div className="mt-16 max-w-4xl mx-auto text-center">
-        <h3
-          className={`text-3xl font-semibold ${
-            darkMode ? "text-indigo-400" : "text-indigo-600"
-          } mb-6`}
-        >
-          My Skills
-        </h3>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-          {/* Skill Cards */}
-          <div
-            className={`bg-gray-100 p-6 rounded-lg shadow-lg text-center ${
-              darkMode ? "bg-gray-700 text-white" : "bg-gray-100 text-gray-800"
-            }`}
-          >
-            <h4 className="font-semibold text-xl text-indigo-600">React</h4>
-          </div>
-          <div
-            className={`bg-gray-100 p-6 rounded-lg shadow-lg text-center ${
-              darkMode ? "bg-gray-700 text-white" : "bg-gray-100 text-gray-800"
-            }`}
-          >
-            <h4 className="font-semibold text-xl text-indigo-600">Node.js</h4>
-          </div>
-          <div
-            className={`bg-gray-100 p-6 rounded-lg shadow-lg text-center ${
-              darkMode ? "bg-gray-700 text-white" : "bg-gray-100 text-gray-800"
-            }`}
-          >
-            <h4 className="font-semibold text-xl text-indigo-600">MongoDB</h4>
-          </div>
-          <div
-            className={`bg-gray-100 p-6 rounded-lg shadow-lg text-center ${
-              darkMode ? "bg-gray-700 text-white" : "bg-gray-100 text-gray-800"
-            }`}
-          >
-            <h4 className="font-semibold text-xl text-indigo-600">
-              Tailwind CSS
-            </h4>
-          </div>
-          <div
-            className={`bg-gray-100 p-6 rounded-lg shadow-lg text-center ${
-              darkMode ? "bg-gray-700 text-white" : "bg-gray-100 text-gray-800"
-            }`}
-          >
-            <h4 className="font-semibold text-xl text-indigo-600">GraphQL</h4>
-          </div>
-          <div
-            className={`bg-gray-100 p-6 rounded-lg shadow-lg text-center ${
-              darkMode ? "bg-gray-700 text-white" : "bg-gray-100 text-gray-800"
-            }`}
-          >
-            <h4 className="font-semibold text-xl text-indigo-600">
-              JavaScript
-            </h4>
-          </div>
-        </div>
-      </div>
     </section>
   );
 };
