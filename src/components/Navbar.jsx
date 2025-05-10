@@ -12,51 +12,52 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   return (
     <nav
       className={`${
-        darkMode
-          ? "bg-gray-800 text-white"
-          : "bg-gradient-to-r from-white to-gray-400 text-black"
-      } p-4 shadow-lg`}
+        darkMode ? "bg-black text-white" : "bg-black text-white"
+      } p-2 shadow-lg`}
     >
-      <div className="max-w-6xl mx-auto flex justify-between items-center">
-        <div className="text-2xl font-bold font-greatMonday">
-          <a href="/">My Portfolio</a>
+      <div className="max-w-7xl mx-auto flex justify-between items-center">
+        <div className="font-bold text-lg">
+          <a href="/">Himanshi Khandelwal</a>
         </div>
 
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex space-x-8 items-center">
           <a
             href="#about"
-            className="hover:text-gray-200 transition duration-300"
+            className="hover:text-gray-600 transition duration-300 text-lg font-semibold"
           >
             About
           </a>
           <a
             href="#skills"
-            className="hover:text-gray-200 transition duration-300"
+            className="hover:text-gray-600 transition duration-300 text-lg font-semibold"
           >
             Skills
           </a>
           <a
             href="#projects"
-            className="hover:text-gray-200 transition duration-300"
+            className="hover:text-gray-600 transition duration-300 text-lg font-semibold"
           >
             Projects
           </a>
           <a
             href="#contact"
-            className="hover:text-gray-200 transition duration-300"
+            className="hover:text-gray-600 transition duration-300 text-lg font-semibold"
           >
             Contact
           </a>
+          {/* Dark mode toggle button */}
+          <button onClick={handleDarkModeToggle} className="text-white p-2">
+            {darkMode ? (
+              <img
+                src="/src/assets/light-mode.png"
+                width="40px"
+                height="40px"
+              />
+            ) : (
+              <img src="/src/assets/dark-mode.png" width="40px" height="40px" />
+            )}
+          </button>
         </div>
-
-        {/* Dark mode toggle button */}
-        <button onClick={handleDarkModeToggle} className="text-white p-2">
-          {darkMode ? (
-            <img src="/src/assets/light-mode.png" width="40px" height="40px" />
-          ) : (
-            <img src="/src/assets/dark-mode.png" width="40px" height="40px" />
-          )}
-        </button>
       </div>
 
       {isOpen && (
