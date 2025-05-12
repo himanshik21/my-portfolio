@@ -9,7 +9,7 @@ const AboutSection = ({ darkMode }) => {
     >
       <div className="container mx-auto grid grid-cols-2 gap-8 items-center">
         {/* Left Column - Text Content */}
-        <div className="pl-16">
+        <div className="pr-16">
           <h2
             className={`text-5xl font-bold mb-8 ${darkMode ? "text-white" : "text-white"
               }`}
