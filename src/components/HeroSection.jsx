@@ -28,10 +28,10 @@ const HeroSection = ({ darkMode }) => {
 
           <div className="flex space-x-4">
             <button className="bg-white text-black px-6 py-2 font-medium">
-              Contact
+              Linkldn
             </button>
             <button className="flex items-center space-x-2 border border-white px-4 py-2">
-              <span>Projects</span>
+              <span>Github</span>
             </button>
           </div>
         </div>
