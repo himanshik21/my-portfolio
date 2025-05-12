@@ -1,6 +1,15 @@
 import React from "react";
 
 const HeroSection = ({ darkMode }) => {
+
+    const handleLinkedInClick = () => {
+      window.open('https://www.linkedin.com/in/himanshikh/', '_blank', 'noopener,noreferrer');
+    }
+
+    const handleGithubClick  = () =>{
+      window.open('https://github.com/himanshik21', '_blank', 'noopener,noreferrer');
+    }
+
   return (
     <section className="bg-black text-white h-screen flex items-center justify-between">
       {/* Left Side - Image */}
@@ -27,10 +36,13 @@ const HeroSection = ({ darkMode }) => {
           </p>
 
           <div className="flex space-x-4">
-            <button className="bg-white text-black px-6 py-2 font-medium">
+            <button className="bg-white text-black px-6 py-2 font-medium"
+              onClick={handleLinkedInClick}>
               Linkldn
             </button>
-            <button className="flex items-center space-x-2 border border-white px-4 py-2">
+            <button className="flex items-center space-x-2 border border-white px-4 py-2"
+              onClick={handleGithubClick}
+            >
               <span>Github</span>
             </button>
           </div>
