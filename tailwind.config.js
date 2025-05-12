@@ -14,6 +14,9 @@ export default {
         lightBackground: '#ffffff',
         lightText: '#333333',
       },
+      fontFamily: {
+        greatMonday: ['"Great Monday"', 'cursive'],
+      },
     },
   },
   plugins: [],

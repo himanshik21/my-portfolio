@@ -5,7 +5,7 @@ const Footer = ({ darkMode }) => {
   return (
     <footer
       className={`py-8 ${
-        darkMode ? "bg-gray-800 text-white" : "bg-indigo-600 text-white"
+        darkMode ? "bg-gray-800 text-white" : "bg-gray-800 text-white"
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 text-center">

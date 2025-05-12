@@ -38,13 +38,13 @@ const ContactSection = ({ darkMode }) => {
     <section
       id="contact"
       className={`py-16 px-4 ${
-        darkMode ? "bg-gray-800 text-white" : "bg-gray-50 text-gray-800"
+        darkMode ? "bg-gray-800 text-white" : "bg-black text-white"
       }`}
     >
       <div className="max-w-6xl mx-auto text-center">
         <h2
           className={`text-4xl font-bold ${
-            darkMode ? "text-indigo-400" : "text-indigo-600"
+            darkMode ? "text-indigo-400" : "text-white"
           } mb-8`}
         >
           Contact Me
@@ -66,7 +66,7 @@ const ContactSection = ({ darkMode }) => {
               <label
                 htmlFor="name"
                 className={`block text-left font-semibold text-lg ${
-                  darkMode ? "text-white" : "text-gray-800"
+                  darkMode ? "text-white" : "text-gray-300"
                 }`}
               >
                 Your Name
@@ -80,7 +80,7 @@ const ContactSection = ({ darkMode }) => {
                 className={`w-full px-4 py-3 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 ${
                   darkMode
                     ? "bg-gray-700 text-white border-gray-600"
-                    : "bg-white text-gray-800 border-gray-300"
+                    : "bg-white text-gray-300 border-gray-300"
                 }`}
                 required
               />
@@ -90,7 +90,7 @@ const ContactSection = ({ darkMode }) => {
               <label
                 htmlFor="email"
                 className={`block text-left font-semibold text-lg ${
-                  darkMode ? "text-white" : "text-gray-800"
+                  darkMode ? "text-white" : "text-gray-300"
                 }`}
               >
                 Your Email
@@ -114,7 +114,7 @@ const ContactSection = ({ darkMode }) => {
               <label
                 htmlFor="message"
                 className={`block text-left font-semibold text-lg ${
-                  darkMode ? "text-white" : "text-gray-800"
+                  darkMode ? "text-white" : "text-gray-300"
                 }`}
               >
                 Your Message
@@ -136,8 +136,8 @@ const ContactSection = ({ darkMode }) => {
 
             <button
               type="submit"
-              className={`w-full py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 focus:outline-none ${
-                darkMode ? "bg-indigo-500 hover:bg-indigo-600" : ""
+              className={`w-full py-3 bg-gray-600 text-white font-semibold rounded-lg hover:bg-gray-900 focus:outline-none ${
+                darkMode ? "bg-gray-700 hover:bg-gray-400" : ""
               }`}
               disabled={isSubmitting}
             >

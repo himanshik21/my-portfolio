@@ -1,47 +1,52 @@
 import React from "react";
 
 const HeroSection = ({ darkMode }) => {
-  return (
-    <section
-      className={`relative ${
-        darkMode
-          ? "bg-gradient-to-r from-gray-800 to-gray-900 text-white"
-          : "bg-gradient-to-r from-indigo-600 to-purple-600 text-white"
-      } h-screen flex items-center justify-center`}
-    >
-      <div
-        className={`absolute inset-0 bg-cover bg-center ${
-          darkMode ? "bg-opacity-30" : "bg-opacity-20"
-        }`}
-        style={{ backgroundImage: "url(https://via.placeholder.com/1500)" }}
-      ></div>
 
-      <div className="relative z-10 text-center px-4">
-        <h1
-          className={`text-5xl font-bold sm:text-6xl md:text-7xl mb-4 ${
-            darkMode ? "text-gray-100" : "text-white"
-          }`}
-        >
-          Hi, I'm Himanshi
-        </h1>
-        <p
-          className={`text-lg sm:text-xl md:text-2xl mb-6 ${
-            darkMode ? "text-gray-200" : "text-white"
-          }`}
-        >
-          A passionate Full Stack Developer who loves to create beautiful and
-          functional websites and applications.
-        </p>
-        <a
-          href="#contact"
-          className={`${
-            darkMode
-              ? "bg-gray-800 text-gray-200 hover:bg-gray-600 hover:text-white"
-              : "bg-white text-indigo-600 hover:bg-indigo-600 hover:text-white"
-          } transition duration-300 py-3 px-6 rounded-lg text-xl font-semibold`}
-        >
-          Contact Me
-        </a>
+    const handleLinkedInClick = () => {
+      window.open('https://www.linkedin.com/in/himanshikh/', '_blank', 'noopener,noreferrer');
+    }
+
+    const handleGithubClick  = () =>{
+      window.open('https://github.com/himanshik21', '_blank', 'noopener,noreferrer');
+    }
+
+  return (
+    <section className="bg-black text-white h-screen flex items-center justify-between">
+      {/* Left Side - Image */}
+      <div className="w-1/2 h-full flex items-center">
+        <img
+          src="/src/assets/left-banner.jpeg"
+          alt="Portrait"
+          className="w-full h-full object-fit"
+        />
+      </div>
+
+      {/* Right Side - Text */}
+      <div className="w-1/2 flex flex-col justify-center px-12">
+        <div className="space-y-4 max-w-lg">
+          <h1 className="text-6xl font-bold flex items-center">
+            <span>My</span>
+            <hr className="flex-grow ml-4 border-t border-white" />
+          </h1>
+          <h1 className="text-6xl font-bold mb-6">Portfolio</h1>
+
+          <p className="text-sm mb-8 text-gray-400">
+            Full Stack Developer focused on building modern, high-performance web applications, 
+            turning ideas into interactive and seamless digital experiences with a blend of frontend and backend skills.
+          </p>
+
+          <div className="flex space-x-4">
+            <button className="bg-white text-black px-6 py-2 font-medium"
+              onClick={handleLinkedInClick}>
+              Linkldn
+            </button>
+            <button className="flex items-center space-x-2 border border-white px-4 py-2"
+              onClick={handleGithubClick}
+            >
+              <span>Github</span>
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );
