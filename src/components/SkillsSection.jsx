@@ -1,6 +1,6 @@
 import React from "react";
 
-const SkillsSection = ({ darkMode }) => {
+const SkillsSection = () => {
   const skills = [
     { name: "React", icon: "https://img.icons8.com/ios/452/react.png" },
     { name: "Node.js", icon: "https://img.icons8.com/ios/452/node-js.png" },
@@ -22,38 +22,57 @@ const SkillsSection = ({ darkMode }) => {
   return (
     <section
       id="skills"
-      className={`py-16 px-4 ${
-        darkMode ? "bg-gray-800 text-white" : "bg-gray-50 text-gray-800"
-      } text-center`}
+      className="bg-black text-white py-16 px-4"
     >
-      <div className="max-w-6xl mx-auto">
-        <h2
-          className={`text-4xl font-bold ${
-            darkMode ? "text-indigo-400" : "text-indigo-600"
-          } mb-8`}
-        >
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-4xl font-bold text-white mb-12 text-center">
           My Skills
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-12">
-          {skills.map((skill, index) => (
-            <div
-              key={index}
-              className={`${
-                darkMode ? "bg-gray-700 text-white" : "bg-white text-gray-800"
-              } p-6 rounded-lg shadow-lg hover:scale-105 transition-transform`}
-            >
-              <img
-                src={skill.icon}
-                alt={skill.name}
-                className="w-16 h-16 mx-auto mb-4"
-              />
-              <h4 className="text-xl font-semibold text-indigo-600">
-                {skill.name}
-              </h4>
-            </div>
-          ))}
+
+        {/* Horizontal Scrolling Carousel */}
+        <div className="relative">
+          <div
+            className="flex overflow-x-scroll pb-10 hide-scroll-bar space-x-8 px-4"
+            style={{
+              scrollSnapType: 'x mandatory',
+              WebkitOverflowScrolling: 'touch'
+            }}
+          >
+            {skills.map((skill, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0 w-64 snap-center"
+              >
+                <div className="bg-gray-700 p-8 rounded-xl text-center transform transition-all duration-300 hover:scale-105 hover:bg-gray-800">
+                  <img
+                    src={skill.icon}
+                    alt={skill.name}
+                    className="w-24 h-24 mx-auto mb-6"
+                  />
+                  <h4 className="text-2xl font-semibold text-gray-300">
+                    {skill.name}
+                  </h4>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Scrollbar Indicators */}
+          <div className="absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-black to-transparent pointer-events-none"></div>
+          <div className="absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-black to-transparent pointer-events-none"></div>
         </div>
       </div>
+
+      {/* Custom CSS for hiding scrollbar while keeping scroll functionality */}
+      <style jsx>{`
+        .hide-scroll-bar::-webkit-scrollbar {
+          display: none;
+        }
+        .hide-scroll-bar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
     </section>
   );
 };
